@@ -1,23 +1,41 @@
 <?php
 if(isset($argv)) {
+    $cidades = array('A', 'B', 'C', 'D');
+
+//$validaLetras = count($cidades);
+//if($validaLetras > 4 or $validaLetras < 1){
+//echo "\r\n";
+//echo "cidades incorretas";
+//echo "\r\n";
+//}
     foreach ($argv as $arg) {
-        $primeraRota = $arg[0];
-        $segundaRota = $arg[1];
-        $terceiraRota = $arg[2];
 
-        if ($primeraRota == 'A' && $segundaRota == 'B' && $terceiraRota == 'C') {
-            echo "A rota começou em A passa por B e terimna em C e a Distancia é 5";
+        $primeraRota = substr($arg, 0);
+        $segundaRota = substr($arg, 1);
+        $terceiraRota = substr($arg, 2);
+
+        if ($primeraRota == $cidades[0]) {
+            echo "cidades " . $cidades[0];
             echo "\r\n";
-
-
-        } elseif ($primeraRota == 'B') {
-
-            echo "ROTA 2";
+            break;
+        }
+        elseif ($segundaRota !=  ) {
+            echo "cidades ". $cidades[1];
             echo "\r\n";
-
+            break;
+        }
+        elseif ($terceiraRota = $cidades[2]) {
+            echo "cidades ". $cidades[2];
+            echo "\r\n";
+            break;
+        }
+        else {
+            echo "Nenhuma das condiões";
+            echo "\r\n";
+            break;
         }
     }
-
 }
 
-echo $primeraRota;
+echo $cidades[2];
+echo "\r\n";
